@@ -17,3 +17,6 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.log('❌ MongoDB Error:', err));
 
 app.use('/api', require('./routes/agentRoutes'));
+app.get('/', (req, res) => {
+  res.send('✅ Backend is up and running!');
+});
