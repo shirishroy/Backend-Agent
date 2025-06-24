@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const PORT = process.env.PORT || 3000; // ✅ Use dynamic port
+const PORT = process.env.PORT || 8080; // ✅ Use dynamic port
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
